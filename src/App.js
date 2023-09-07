@@ -1,4 +1,4 @@
-import { Flex, Heading, IconButton, Link, Spacer, VStack, useColorMode, Stack } from "@chakra-ui/react";
+import { Flex, Heading, IconButton, Spacer, VStack, useColorMode, Stack, useColorModeValue } from "@chakra-ui/react";
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa';
 import React from 'react';
 import MenuHambur from './components/MenuHambur';
@@ -6,12 +6,17 @@ import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Contacto from "./components/Contacto";
-
-
+import { Link, animateScroll as scroll } from "react-scroll";
+import './App.css'
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
+  const linkColor = useColorModeValue("white", undefined)
+
+  let scrollToTop = () => {
+    scroll.scrollToTop();
+  }
 
   return (
     <>
@@ -22,20 +27,48 @@ function App() {
           </Stack>
 
           <Heading
+            onClick={scrollToTop}
             ml="8"
             size="md"
             alignSelf='center'
             fontWeight='semibold'
             color="cyan.400"> Gabriel Marzioli </Heading>
-          <Flex justifyContent='center' w='100%' display={{ base: 'none', md: 'flex' }} >
-            <Link p={6} _hover={{ textDecoration: 'none', color: 'blue' }} href='#skills'>Skills</Link>
-            <Link p={6} _hover={{ textDecoration: 'none', color: 'blue' }} href='#proyectos'>Portafolio</Link>
-            <Link p={6} _hover={{ textDecoration: 'none', color: 'blue' }} href='#contacto'>Contacto</Link>
+          <Flex justifyContent='center' gap={20} w='100%' color={linkColor} display={{ base: 'none', md: 'flex' }} >
+            <Link
+              p={6}
+              // _hover={{ textDecoration: 'none', color: 'blue', cursor: 'pointer' }}
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to='skills'
+            >Skills</Link>
+            <Link
+              p={6}
+              // _hover={{ textDecoration: 'none', color: 'blue' }}
+              activeClass="active"
+              to='proyectos'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >Portafolio</Link>
+            <Link
+              p={6}
+              // _hover={{ textDecoration: 'none', color: 'blue' }}
+              activeClass="active"
+              to='contacto'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >Contacto</Link>
 
           </Flex>
           <Spacer></Spacer>
-          <IconButton icon={<FaLinkedin />} isRound='true' onClick={toggleColorMode}></IconButton>
-          <IconButton ml={2} icon={<FaGithub />} isRound='true' onClick={toggleColorMode}></IconButton>
+          <IconButton icon={<FaLinkedin />} isRound='true'></IconButton>
+          <IconButton ml={2} icon={<FaGithub />} isRound='true'></IconButton>
           <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>
         </Flex>
         <Header></Header>

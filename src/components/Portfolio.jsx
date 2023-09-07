@@ -35,8 +35,8 @@ function Portfolio() {
                                 </Text>
                             </CardBody>
                             <CardFooter justifyContent='center' gap={10}>
-                                <Button variant='solid' backgroundColor='blue' width='30%' cursor='pointer' py={5} ><Link className='buttonsCards' target='_blank' href="https://henry-library.netlify.app/">ir al Demo</Link></Button>
-                                <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} ><Link className='buttonsCards' target='_blank' href="https://www.notion.so/Repos-App-Libreria-Henry-c8a1a2c5fc3948c09448243d5e1fc4dd">Repos</Link></Button>
+                                <Button variant='solid' colorScheme="blue" width='30%' cursor='pointer' py={5} ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://henry-library.netlify.app/">ir al Demo</Link></Button>
+                                <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://www.notion.so/Repos-App-Libreria-Henry-c8a1a2c5fc3948c09448243d5e1fc4dd">Repos</Link></Button>
                             </CardFooter>
                         </Stack>
 
@@ -66,8 +66,8 @@ function Portfolio() {
                                 </Text>
                             </CardBody>
                             <CardFooter justifyContent='center' gap={10}>
-                                <Button variant='solid' cursor='pointer' backgroundColor='blue' width='50%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://youtu.be/8bP8FS9GXc0">ir al videoDemo</Link></Button>
-                                <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://github.com/gabriel073/PI_FOOD">Repo</Link></Button>
+                                <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://youtu.be/8bP8FS9GXc0">ir al videoDemo</Link></Button>
+                                <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/PI_FOOD">Repo</Link></Button>
                             </CardFooter>
                         </Stack>
 
@@ -96,8 +96,8 @@ function Portfolio() {
               </Text>
             </CardBody>
             <CardFooter justifyContent='center' gap={10}>
-              <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="">ir al Demo</Link></Button>
-              <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://github.com/gabriel073/multiProjects">Repo</Link></Button>
+              <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="">ir al Demo</Link></Button>
+              <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/multiProjects">Repo</Link></Button>
             </CardFooter>
           </Stack>
 
@@ -126,8 +126,8 @@ function Portfolio() {
                                 </Text>
                             </CardBody>
                             <CardFooter justifyContent='center' gap={10}>
-                                <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://psicoespacio-web.vercel.app/">ir al Demo</Link></Button>
-                                <Button variant='solid' cursor='pointer' backgroundColor='blue' width='30%' py={5} size='lg'><Link className='buttonsCards' target='_blank' href="https://github.com/gabriel073/land_page_psicoEspacio">Repo</Link></Button>
+                                <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://psicoespacio-web.vercel.app/">ir al Demo</Link></Button>
+                                <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/land_page_psicoEspacio">Repo</Link></Button>
                             </CardFooter>
                         </Stack>
 

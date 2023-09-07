@@ -1,17 +1,18 @@
-import { Box, Button, Circle, Flex, Image, Stack, Text, useColorMode, useMediaQuery } from '@chakra-ui/react';
+import { Box, Button, Circle, Flex, Image, Stack, Text, useColorMode, useColorModeValue, useMediaQuery } from '@chakra-ui/react';
 import React from 'react'
 import { motion } from 'framer-motion';
-
 function Header() {
     const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+    const circleColor = useColorModeValue("#1B2230", "#2A3460")
 
     return (
         <Stack marginTop='100px' >
             <Circle
                 position="absolute"
-                bg="blue.100"
+                // bg="blue.100"
+                bg={circleColor}
                 opacity="0.1"
                 w="300px"
                 h="300px"
@@ -23,7 +24,6 @@ function Header() {
 
                     <Text fontSize="5xl" fontWeight="semibold">
                         <motion.div
-
                             initial={{ opacity: 0, scale: 0, x: -500 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
                             transition={{ duration: 0.5 }}

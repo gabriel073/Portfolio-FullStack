@@ -1,16 +1,21 @@
-import { Input, Stack, Text, Textarea } from '@chakra-ui/react'
+import { Input, Stack, Text, Textarea, useColorModeValue } from '@chakra-ui/react'
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import React, { useRef, useState } from 'react'
 import Swal from 'sweetalert2';
 
-
 const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } = process.env;
 
 function Contacto() {
+    const borderForm = useColorModeValue("black", undefined)
 
 
-    let data = useRef();
+    let [data, setData] = useState({
+        name: "",
+        mail: "",
+        message: "",
+    });
+    // let data = useRef();
     const [nameError, setNameError] = useState(false);
     const [emailError, setEmailError] = useState(false);
     const [messageError, setMessageError] = useState(false);
@@ -55,14 +60,13 @@ function Contacto() {
     }
 
     const handleInputChange = event => {
-
         const { name, value } = event.target;
-        setNameError(false);
-        setEmailError(false);
-        setMessageError(false);
-        data({
+        setNameError(false)
+        setEmailError(false)
+        setMessageError(false)
+        setData({
             ...data,
-            [name]: value
+            [name]: value,
         });
     }
     const paternEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -75,12 +79,13 @@ function Contacto() {
             >
                 <Text marginTop='90px' fontSize='3rem' textAlign='center'>Contacto</Text>
                 <Stack h={620} w={500} alignItems='center' borderRadius={40} padding={10}
-                    border={{ base: 'solid black  2px', md: 'solid white 2px' }}>
+                    border={{ base: 'solid  2px', md: 'solid  2px' }} borderColor={borderForm}>
 
                     <form ref={data} onSubmit={sendEmail}  >
                         <label>Nombre</label>
                         <Input
                             h={25}
+                            borderColor={borderForm}
                             type="text"
                             width='100%'
                             mb='15px'
@@ -93,6 +98,7 @@ function Contacto() {
                         </Stack>
                         <label>Email</label>
                         <Input
+                            borderColor={borderForm}
                             h={25}
                             type="email"
                             id="email"
@@ -106,6 +112,7 @@ function Contacto() {
                         </Stack>
                         <label>Mensaje</label>
                         <Textarea
+                            borderColor={borderForm}
                             mb='-30px'
                             id="message"
                             name="message"
@@ -119,7 +126,15 @@ function Contacto() {
                             {messageError && <p>{messageError}</p>}
                         </Stack>
                         <Stack alignItems='center'>
-                            <Input type="submit" value="Send" backgroundColor='blue' mt={20} width='80%' h='40px' />
+                            <Input
+                                borderColor={borderForm}
+                                type="submit"
+                                value="Enviar"
+                                backgroundColor='blue.400'
+                                mt={20}
+                                width='80%'
+                                h='40px'
+                            />
                         </Stack>
                     </form>
                     <Stack mt='2%'>
