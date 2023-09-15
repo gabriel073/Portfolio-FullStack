@@ -1,4 +1,4 @@
-import { Flex, Heading, IconButton, Spacer, VStack, useColorMode, Stack, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Heading, IconButton, Spacer, VStack, useColorMode, Stack, useColorModeValue, Image } from "@chakra-ui/react";
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa';
 import React from 'react';
 import MenuHambur from './components/MenuHambur';
@@ -27,14 +27,31 @@ function App() {
           </Stack>
 
           <Heading
+            display='flex'
+            gap={2}
+            className="link"
             onClick={scrollToTop}
             ml="8"
             size="md"
-            alignSelf='center'
+            alignItems='center'
             fontWeight='semibold'
-            color="cyan.400"> Gabriel Marzioli </Heading>
-          <Flex justifyContent='center' gap={20} w='100%' color={linkColor} display={{ base: 'none', md: 'flex' }} >
+            color="cyan.400">  <Image
+              src="../gamer.png"
+              alt="logo"
+              w="3rem"
+              fontFamily={'VT323, sans-serif'}
+              fontSize={50} /> GM</Heading>
+          <Flex
+            justifyContent='center'
+            gap={20}
+            w='100%'
+            color={linkColor}
+            display={{ base: 'none', md: 'flex' }}
+            fontFamily={'VT323, sans-serif'}
+            fontSize={30}
+          >
             <Link
+              className="link"
               p={6}
               // _hover={{ textDecoration: 'none', color: 'blue', cursor: 'pointer' }}
               activeClass="active"
@@ -45,6 +62,7 @@ function App() {
               to='skills'
             >Skills</Link>
             <Link
+              className="link"
               p={6}
               // _hover={{ textDecoration: 'none', color: 'blue' }}
               activeClass="active"
@@ -55,6 +73,7 @@ function App() {
               duration={500}
             >Portafolio</Link>
             <Link
+              className="link"
               p={6}
               // _hover={{ textDecoration: 'none', color: 'blue' }}
               activeClass="active"

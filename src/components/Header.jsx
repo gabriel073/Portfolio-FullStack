@@ -21,8 +21,7 @@ function Header() {
                 spacing="200px" p={isNotSmallerScreen ? "32" : "0"}
                 alignSelf="flex-start">
                 <Box mt={isNotSmallerScreen ? "0" : 16} align='flex-start'>
-
-                    <Text fontSize="5xl" fontWeight="semibold">
+                    <Text fontSize="5xl" fontWeight="semibold" fontFamily={'VT323, sans-serif'}>
                         <motion.div
                             initial={{ opacity: 0, scale: 0, x: -500 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -36,12 +35,19 @@ function Header() {
                         whileInView={{ opacity: 1, scale: 1, x: 0 }}
                         transition={{ duration: 0.7 }}
                     >
-                        <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, cyan.400, blue.500, purple.600)" bgClip='text' mr='30px' >Gabriel Marzioli </Text>
+
+                        <Text
+                            fontSize="7xl"
+                            fontWeight="bold"
+                            bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
+                            bgClip='text' mr='30px'
+                            fontFamily={'VT323, sans-serif'}
+                        >Gabriel Marzioli </Text>
                     </motion.div>
-                    <Text color={isDark ? "gray.200" : "gray.500"}>Desarrollador Fullstack 🗣</Text>
+                    <Text color={isDark ? "gray.200" : "gray.500"} fontFamily={'VT323, sans-serif'} fontSize={30}>Desarrollador Fullstack 🗣</Text>
                     <Button mt={8} colorScheme="blue" onClick={() =>
-                        window.open("https://drive.google.com/file/d/16xct61zlBt91czwJeI9kY8g7j-NCJdAr/view?usp=drive_link")
-                    }>descargar CV</Button>
+                        window.open("https://drive.google.com/file/d/18JAc_swgt99Jz9bbr2ohflxFsZ0O49EK/view?usp=drive_link")
+                    } fontFamily={'VT323, sans-serif'}>descargar CV</Button>
 
                 </Box>
 

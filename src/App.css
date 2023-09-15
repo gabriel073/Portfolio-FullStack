@@ -2,6 +2,7 @@
   border-bottom: 2px solid blue;
   cursor: pointer;
 }
-.link {
+.link:hover {
   cursor: pointer;
+  color: rgba(162, 162, 212, 0.855);
 }

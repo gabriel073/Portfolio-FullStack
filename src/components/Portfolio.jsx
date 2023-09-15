@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 
 
 function Portfolio() {
-
     return (
         <Stack id="proyectos" mb={70} gap={30} >
             <motion.div
@@ -13,14 +12,22 @@ function Portfolio() {
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 0.7 }}
             >
-                <Text textAlign='center' fontSize='4rem' marginTop='90px' >Portafolio</Text>
+                <Text
+                    textAlign='center'
+                    fontSize='4rem'
+                    fontFamily={'VT323, sans-serif'}  >Portafolio</Text>
             </motion.div>
 
-            <Stack className='cards' m='auto' w='400px' direction={{ base: 'row', sm: 'column' }}>
+            <Stack
+                m='auto'
+                w='400px'
+                direction={{ base: 'row', sm: 'column' }}
+            >
                 <Stack >
                     <Card
                         overflow='hidden'
-                        variant='outline'>
+                        variant='outline'
+                        textAlign='center'>
                         <Stack>
                             <CardBody>
                                 <Heading size='md' mb={5}>Libreria Henry</Heading>
@@ -48,9 +55,14 @@ function Portfolio() {
             </Stack>
 
 
-            <Stack className='cards' m='auto' w='400px' direction={{ base: 'row', sm: 'column' }}>
+            <Stack
+                m='auto'
+                w='400px'
+                direction={{ base: 'row', sm: 'column' }}
+            >
                 <Stack>
                     <Card
+                        textAlign='center'
                         overflow='hidden'
                         variant='outline'>
                         <Stack>
@@ -112,7 +124,8 @@ function Portfolio() {
                 <Stack>
                     <Card
                         overflow='hidden'
-                        variant='outline'>
+                        variant='outline'
+                        textAlign='center'>
                         <Stack>
                             <CardBody>
                                 <Heading size='md' mb={5}>PsicoEspacio en Linea</Heading>
