@@ -1,6 +1,8 @@
 import { Box, Button, Circle, Flex, Image, Stack, Text, useColorMode, useColorModeValue, useMediaQuery } from '@chakra-ui/react';
 import React from 'react'
 import { motion } from 'framer-motion';
+
+
 function Header() {
     const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
@@ -21,6 +23,7 @@ function Header() {
                 spacing="200px" p={isNotSmallerScreen ? "32" : "0"}
                 alignSelf="flex-start">
                 <Box mt={isNotSmallerScreen ? "0" : 16} align='flex-start'>
+                    {/* fontSize={{ base: "5xl", sm: "2xl" }} */}
                     <Text fontSize="5xl" fontWeight="semibold" fontFamily={'VT323, sans-serif'}>
                         <motion.div
                             initial={{ opacity: 0, scale: 0, x: -500 }}
@@ -37,6 +40,7 @@ function Header() {
                     >
 
                         <Text
+                            // fontSize={{ base: "2xl", sm: "7xl" }}
                             fontSize="7xl"
                             fontWeight="bold"
                             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
@@ -52,8 +56,9 @@ function Header() {
                 </Box>
 
                 <Image alignSelf="center"
-                    mt={isNotSmallerScreen ? "0" : "12"}
-                    mb={isNotSmallerScreen ? "0" : "12"}
+                    mt={isNotSmallerScreen ? "0" : "-400"}
+                    mr={isNotSmallerScreen ? "5" : "-80"}
+                    mb={isNotSmallerScreen ? "0" : "30"}
                     borderRadius='full'
                     backgroundColor="transparent"
                     filter='sepia(80%)'

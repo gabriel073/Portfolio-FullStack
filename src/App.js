@@ -1,4 +1,4 @@
-import { Flex, Heading, IconButton, Spacer, VStack, useColorMode, Stack, useColorModeValue, Image } from "@chakra-ui/react";
+import { Button, Flex, Heading, IconButton, Spacer, VStack, useColorMode, Stack, useColorModeValue, Image } from "@chakra-ui/react";
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa';
 import React from 'react';
 import MenuHambur from './components/MenuHambur';
@@ -9,6 +9,8 @@ import Contacto from "./components/Contacto";
 import { Link, animateScroll as scroll } from "react-scroll";
 import './App.css'
 
+
+
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
@@ -17,6 +19,7 @@ function App() {
   let scrollToTop = () => {
     scroll.scrollToTop();
   }
+
 
   return (
     <>
@@ -86,8 +89,8 @@ function App() {
 
           </Flex>
           <Spacer></Spacer>
-          <IconButton icon={<FaLinkedin />} isRound='true'></IconButton>
-          <IconButton ml={2} icon={<FaGithub />} isRound='true'></IconButton>
+          <IconButton icon={<FaLinkedin />} onClick={() => window.open("https://www.linkedin.com/in/gabriel-marzioli/")} isRound='true'> </IconButton>
+          <IconButton ml={2} icon={<FaGithub />} onClick={() => window.open("https://github.com/gabriel073")} isRound='true'></IconButton>
           <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>
         </Flex>
         <Header></Header>

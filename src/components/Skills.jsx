@@ -15,7 +15,7 @@ function Skills() {
                 >
                     <Text
                         textAlign='center'
-                        fontSize={80}
+                        fontSize={{ base: "50", md: "80" }}
                         marginTop='90px'
                         mb={50}
                         fontFamily={'VT323, sans-serif'}
