@@ -50,7 +50,7 @@ function Header() {
                     </motion.div>
                     <Text color={isDark ? "gray.200" : "gray.500"} fontFamily={'VT323, sans-serif'} fontSize={30}>Desarrollador Fullstack 🗣</Text>
                     <Button mt={8} colorScheme="blue" onClick={() =>
-                        window.open("https://drive.google.com/file/d/18JAc_swgt99Jz9bbr2ohflxFsZ0O49EK/view?usp=drive_link")
+                        window.open("https://drive.google.com/file/d/1KkCSQPqjDC16F-HkD0GZOGggEy2s_z4f/view?usp=drive_link")
                     } fontFamily={'VT323, sans-serif'}>descargar CV</Button>
 
                 </Box>

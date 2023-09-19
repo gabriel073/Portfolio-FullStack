@@ -32,6 +32,42 @@ function Portfolio() {
                             textAlign='center'>
                             <Stack>
                                 <CardBody>
+                                    <Heading size='md' mb={5}>Tu Asistencia</Heading>
+                                    <Image
+                                        mb={5}
+                                        src='../assets/Captura de tu Asistencia.png'
+                                        alt='tu_asistencia'
+                                    />
+                                    <Text py='2'>
+                                        Este proyecto es una colaboración al estilo de Side Project, que pretende solucionar el ingreso y egreso del personal de determinado trabajo,
+                                        contiene autentificación de administrador, notificación por mail al autenticar, un crud de empleados el cual se puede crear, modificar y eliminar, solicitud de informes por fecha, opciones de impresion de datos.
+                                    </Text>
+                                </CardBody>
+                                <CardFooter justifyContent='center' gap={10}>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://youtu.be/KbMPKyy1kQ8">ir al videoDemo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg' ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/molder26/tuasistencia/tree/gabyDev">Repo</Link></Button>
+                                </CardFooter>
+                            </Stack>
+
+
+                        </Card>
+                    </Stack>
+                </Stack>
+
+
+
+                <Stack
+                    m='auto'
+                    w='400px'
+                    direction={{ base: 'row', sm: 'column' }}
+                >
+                    <Stack >
+                        <Card
+                            overflow='hidden'
+                            variant='outline'
+                            textAlign='center'>
+                            <Stack>
+                                <CardBody>
                                     <Heading size='md' mb={5}>Libreria Henry</Heading>
                                     <Image
                                         mb={5}
