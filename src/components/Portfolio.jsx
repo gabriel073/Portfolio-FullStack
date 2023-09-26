@@ -2,10 +2,7 @@ import { Button, Card, CardBody, CardFooter, Heading, Image, Link, Stack, Text }
 import React from 'react'
 import { motion } from 'framer-motion';
 
-
-
 function Portfolio() {
-
     return (
         <>
             <Stack id="proyectos" mb={70} gap={30} >
@@ -17,9 +14,8 @@ function Portfolio() {
                     <Text
                         textAlign='center'
                         fontSize='4rem'
-                        fontFamily={'VT323, sans-serif'}  >Portafolio</Text>
+                        fontFamily={'VT323, sans-serif'}>Portafolio</Text>
                 </motion.div>
-
                 <Stack
                     m='auto'
                     w='400px'
@@ -48,14 +44,9 @@ function Portfolio() {
                                     <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg' ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/molder26/tuasistencia/tree/gabyDev">Repo</Link></Button>
                                 </CardFooter>
                             </Stack>
-
-
                         </Card>
                     </Stack>
                 </Stack>
-
-
-
                 <Stack
                     m='auto'
                     w='400px'
@@ -84,13 +75,9 @@ function Portfolio() {
                                     <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://www.notion.so/Repos-App-Libreria-Henry-c8a1a2c5fc3948c09448243d5e1fc4dd">Repos</Link></Button>
                                 </CardFooter>
                             </Stack>
-
-
                         </Card>
                     </Stack>
                 </Stack>
-
-
                 <Stack
                     m='auto'
                     w='400px'
@@ -118,10 +105,6 @@ function Portfolio() {
                                     <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/PI_FOOD">Repo</Link></Button>
                                 </CardFooter>
                             </Stack>
-
-                            <Stack>
-                            </Stack>
-
                         </Card>
                     </Stack>
                 </Stack>
@@ -148,10 +131,6 @@ function Portfolio() {
                                     <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/multi-games">Repo</Link></Button>
                                 </CardFooter>
                             </Stack>
-
-                            <Stack>
-                            </Stack>
-
                         </Card>
                     </Stack>
                 </Stack>
@@ -179,7 +158,6 @@ function Portfolio() {
                                     <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/land_page_psicoEspacio">Repo</Link></Button>
                                 </CardFooter>
                             </Stack>
-
                         </Card>
                     </Stack>
                 </Stack>

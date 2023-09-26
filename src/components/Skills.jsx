@@ -89,9 +89,6 @@ function Skills() {
                 </Stack>
             </Stack >
         </>
-
     )
-
 }
-
 export default Skills;

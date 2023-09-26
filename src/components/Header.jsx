@@ -38,9 +38,7 @@ function Header() {
                         whileInView={{ opacity: 1, scale: 1, x: 0 }}
                         transition={{ duration: 0.7 }}
                     >
-
                         <Text
-                            // fontSize={{ base: "2xl", sm: "7xl" }}
                             fontSize="7xl"
                             fontWeight="bold"
                             bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
@@ -52,9 +50,7 @@ function Header() {
                     <Button mt={8} colorScheme="blue" onClick={() =>
                         window.open("https://drive.google.com/file/d/1KkCSQPqjDC16F-HkD0GZOGggEy2s_z4f/view?usp=drive_link")
                     } fontFamily={'VT323, sans-serif'}>descargar CV</Button>
-
                 </Box>
-
                 <Image alignSelf="center"
                     mt={isNotSmallerScreen ? "0" : "-400"}
                     mr={isNotSmallerScreen ? "5" : "-80"}
@@ -66,11 +62,8 @@ function Header() {
                     boxSize="300px"
                     src='../../assets/foto_perfil.jpg' alt='photoPerfil'
                 />
-
             </Flex>
-
         </Stack>
     )
 }
-
 export default Header;
