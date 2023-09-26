@@ -126,35 +126,35 @@ function Portfolio() {
                     </Stack>
                 </Stack>
 
-                {/* <Stack className='cards' m='auto' w='400px' direction={{ base: 'row', sm: 'column' }}>
-      <Stack>
-        <Card
-          overflow='hidden'
-          variant='outline'>
-          <Stack>
-            <CardBody>
-              <Heading size='md' mb={5}>Multi Games</Heading>
-              <Image
-                mb={5}
-                src='../assets/multiGames.png'
-                alt='multiGames'
-              />
-              <Text py='2'>
-                Multi Games es una aplicación web con un menú que contiene 3 juegos clásicos que atrapa al usuario a entrenerse y salir un poco de la rutina, el clásico juego de memoria donde hay que encontrar en un tablero ramdon, las 2 fichas que coinciden, el tipico tipeador de palabras por tiempo, y adivina pokemon donde aparece la silueta de personajes ramdon detrás de unas hierbas y tendrás que saber de quién se trata.
-              </Text>
-            </CardBody>
-            <CardFooter justifyContent='center' gap={10}>
-              <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="">ir al Demo</Link></Button>
-              <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/multiProjects">Repo</Link></Button>
-            </CardFooter>
-          </Stack>
+                <Stack className='cards' m='auto' w='400px' direction={{ base: 'row', sm: 'column' }}>
+                    <Stack>
+                        <Card
+                            overflow='hidden'
+                            variant='outline'>
+                            <Stack>
+                                <CardBody>
+                                    <Heading size='md' mb={5}>Multi Games</Heading>
+                                    <Image
+                                        mb={5}
+                                        src='../assets/multiGames.png'
+                                        alt='multiGames'
+                                    />
+                                    <Text py='2'>
+                                        Multi Games es una aplicación web con un menú que contiene 3 juegos clásicos que atrapa al usuario a entrenerse y salir un poco de la rutina, el clásico juego de memoria donde hay que encontrar en un tablero ramdon, las 2 fichas que coinciden, el tipico tipeador de palabras por tiempo, y adivina pokemon donde aparece la silueta de personajes ramdon detrás de unas hierbas y tendrás que saber de quién se trata.
+                                    </Text>
+                                </CardBody>
+                                <CardFooter justifyContent='center' gap={10}>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://multi-games.vercel.app/">ir al Demo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/multi-games">Repo</Link></Button>
+                                </CardFooter>
+                            </Stack>
 
-          <Stack>
-          </Stack>
+                            <Stack>
+                            </Stack>
 
-        </Card>
-      </Stack>
-    </Stack> */}
+                        </Card>
+                    </Stack>
+                </Stack>
 
                 <Stack marginBottom='80px' w='400px' direction={{ base: 'row', sm: 'column' }}>
                     <Stack>
