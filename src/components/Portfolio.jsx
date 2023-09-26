@@ -109,11 +109,13 @@ function Portfolio() {
                     </Stack>
                 </Stack>
 
-                <Stack className='cards' m='auto' w='400px' direction={{ base: 'row', sm: 'column' }}>
+                <Stack w='400px' direction={{ base: 'row', sm: 'column' }}>
                     <Stack>
                         <Card
                             overflow='hidden'
-                            variant='outline'>
+                            variant='outline'
+                            textAlign='center'
+                        >
                             <Stack>
                                 <CardBody>
                                     <Heading size='md' mb={5}>Multi Games</Heading>
