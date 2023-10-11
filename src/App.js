@@ -1,20 +1,21 @@
-import { Button, Flex, Heading, IconButton, Spacer, VStack, useColorMode, Stack, useColorModeValue, Image } from "@chakra-ui/react";
+import { Flex, Heading, IconButton, VStack, useColorMode, Stack, useColorModeValue, Image} from "@chakra-ui/react";
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa';
 import React from 'react';
 import MenuHambur from './components/MenuHambur';
 import Header from "./components/Header";
 import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
 import Contacto from "./components/Contacto";
 import { Link, animateScroll as scroll } from "react-scroll";
 import './App.css'
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
-  const linkColor = useColorModeValue("white", undefined)
+  const linkColor = useColorModeValue("black", undefined)
 
   let scrollToTop = () => {
     scroll.scrollToTop();
@@ -23,8 +24,8 @@ function App() {
 
   return (
     <>
-      <VStack p={5}>
-        <Flex w="100%" alignItems='center' position='fixed' backgroundColor='#2d363f' opacity='.8' backdropFilter='blur(10px)' zIndex='1'>
+      <VStack p={5} maxWidth="1200px"    height="100%" m="auto" >
+        <Stack alignItems='center' position="fixed"  opacity='.8' backdropFilter='blur(10px)' w="100%" display="flex" flexDirection="row" justifyContent="space-around" zIndex="10">
           <Stack display={{ base: 'block', md: 'none' }}>
             <MenuHambur />
           </Stack>
@@ -34,20 +35,20 @@ function App() {
             gap={2}
             className="link"
             onClick={scrollToTop}
-            ml="8"
-            size="md"
+                        size="md"
             alignItems='center'
-            fontWeight='semibold'
+            fontWeight='normal'
             color="cyan.400">  <Image
               src="../gamer.png"
               alt="logo"
               w="3rem"
               fontFamily={'VT323, sans-serif'}
-              fontSize={50} /> GM</Heading>
+              fontSize={50} /> GM
+                  </Heading>
           <Flex
             justifyContent='center'
-            gap={20}
-            w='100%'
+            gap={25}
+            
             color={linkColor}
             display={{ base: 'none', md: 'flex' }}
             fontFamily={'VT323, sans-serif'}
@@ -56,7 +57,6 @@ function App() {
             <Link
               className="link"
               p={6}
-              // _hover={{ textDecoration: 'none', color: 'blue', cursor: 'pointer' }}
               activeClass="active"
               spy={true}
               smooth={true}
@@ -67,18 +67,16 @@ function App() {
             <Link
               className="link"
               p={6}
-              // _hover={{ textDecoration: 'none', color: 'blue' }}
               activeClass="active"
               to='proyectos'
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
-            >Portafolio</Link>
+            >Proyectos</Link>
             <Link
               className="link"
               p={6}
-              // _hover={{ textDecoration: 'none', color: 'blue' }}
               activeClass="active"
               to='contacto'
               spy={true}
@@ -88,18 +86,18 @@ function App() {
             >Contacto</Link>
 
           </Flex>
-          <Spacer></Spacer>
+        <Stack flexDirection="row">
           <IconButton icon={<FaLinkedin />} onClick={() => window.open("https://www.linkedin.com/in/gabriel-marzioli/")} isRound='true'> </IconButton>
-          <IconButton ml={2} icon={<FaGithub />} onClick={() => window.open("https://github.com/gabriel073")} isRound='true'></IconButton>
-          <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>
-        </Flex>
+          <IconButton  icon={<FaGithub />} onClick={() => window.open("https://github.com/gabriel073")} isRound='true'></IconButton>
+          <IconButton  icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>
+          </Stack>
+        </Stack>
         <Header></Header>
         <Skills></Skills>
-        <Portfolio></Portfolio>
+        <Projects></Projects>
         <Contacto></Contacto>
-        {/*   <Social></Social>
-          <Profile></Profile> */}
-      </VStack>
+        <Footer></Footer>
+          </VStack>
     </>
   );
 }

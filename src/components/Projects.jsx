@@ -1,32 +1,41 @@
-import { Button, Card, CardBody, CardFooter, Heading, Image, Link, Stack, Text } from '@chakra-ui/react'
+import { Button, Card, CardBody, CardFooter, Grid, Heading, Image, Link, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { motion } from 'framer-motion';
 
-function Portfolio() {
+function Projects() {
     return (
         <>
-            <Stack id="proyectos" mb={70} gap={30} >
-                <motion.div
+          
+                <motion.div           
                     initial={{ opacity: 0, scale: 0, x: -500 }}
                     whileInView={{ opacity: 1, scale: 1, x: 0 }}
                     transition={{ duration: 0.7 }}
                 >
                     <Text
+                   mt="7rem"
+                   id="proyectos"
                         textAlign='center'
                         fontSize='4rem'
-                        fontFamily={'VT323, sans-serif'}>Portafolio</Text>
+                        fontFamily={'VT323, sans-serif'}>Proyectos</Text>
                 </motion.div>
+                <Grid   templateColumns="repeat(3, 1fr)" gap="10"   >
                 <Stack
-                    m='auto'
-                    w='400px'
+              
+                    // m='auto'
+                    // w='400px'
+                    height="100%"
+                    w="100%"
                     direction={{ base: 'row', sm: 'column' }}
                 >
-                    <Stack >
+                    <Stack  >
                         <Card
                             overflow='hidden'
                             variant='outline'
-                            textAlign='center'>
-                            <Stack>
+                            textAlign='center'
+                            width="100%"
+                            height="100%"
+                            >
+                            <Stack  height="100%" justifyItems="end">
                                 <CardBody>
                                     <Heading size='md' mb={5}>Tu Asistencia</Heading>
                                     <Image
@@ -40,25 +49,29 @@ function Portfolio() {
                                     </Text>
                                 </CardBody>
                                 <CardFooter justifyContent='center' gap={10}>
-                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://youtu.be/KbMPKyy1kQ8">ir al videoDemo</Link></Button>
-                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg' ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/molder26/tuasistencia/tree/gabyDev">Repo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://youtu.be/KbMPKyy1kQ8">ir al Demo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg' ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/molder26/tuasistencia/tree/gabyDev">Repo</Link></Button>
                                 </CardFooter>
                             </Stack>
                         </Card>
                     </Stack>
                 </Stack>
                 <Stack
-                    m='auto'
-                    w='400px'
+                    // m='auto'
+                    // w='400px'
+                    w="100%"
+                    
                     direction={{ base: 'row', sm: 'column' }}
                 >
-                    <Stack >
+                    <Stack>
                         <Card
                             overflow='hidden'
                             variant='outline'
-                            textAlign='center'>
-                            <Stack>
-                                <CardBody>
+                            textAlign='center'
+                            height="55rem"
+                           >
+                            <Stack height="100%" justifyItems="end">
+                                <CardBody  >
                                     <Heading size='md' mb={5}>Libreria Henry</Heading>
                                     <Image
                                         mb={5}
@@ -71,24 +84,28 @@ function Portfolio() {
                                     </Text>
                                 </CardBody>
                                 <CardFooter justifyContent='center' gap={10}>
-                                    <Button variant='solid' colorScheme="blue" width='30%' cursor='pointer' py={5} ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://henry-library.netlify.app/">ir al Demo</Link></Button>
-                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://www.notion.so/Repos-App-Libreria-Henry-c8a1a2c5fc3948c09448243d5e1fc4dd">Repos</Link></Button>
+                                    <Button variant='solid' colorScheme="blue" width='50%'  cursor='pointer' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://henry-library.netlify.app/">ir al Demo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg' ><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://www.notion.so/Repos-App-Libreria-Henry-c8a1a2c5fc3948c09448243d5e1fc4dd">Repos</Link></Button>
                                 </CardFooter>
                             </Stack>
                         </Card>
                     </Stack>
                 </Stack>
+
                 <Stack
-                    m='auto'
-                    w='400px'
+                    // m='auto'
+                    // w='400px'
+                    w="100%"
+                    height="100%"
                     direction={{ base: 'row', sm: 'column' }}
                 >
-                    <Stack>
+                    <Stack >
                         <Card
                             textAlign='center'
                             overflow='hidden'
-                            variant='outline'>
-                            <Stack>
+                            variant='outline'
+                            height="55rem">
+                            <Stack  height="100%" justifyItems="end">
                                 <CardBody>
                                     <Heading size='md' mb={5}>App Food</Heading>
                                     <Image
@@ -101,22 +118,26 @@ function Portfolio() {
                                     </Text>
                                 </CardBody>
                                 <CardFooter justifyContent='center' gap={10}>
-                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://youtu.be/8bP8FS9GXc0">ir al videoDemo</Link></Button>
-                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/PI_FOOD">Repo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://youtu.be/8bP8FS9GXc0">ir al Demo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/PI_FOOD">Repo</Link></Button>
                                 </CardFooter>
                             </Stack>
                         </Card>
                     </Stack>
                 </Stack>
 
-                <Stack w='400px' direction={{ base: 'row', sm: 'column' }}>
+                <Stack
+                //  w='400px'
+                w="100%"
+                  direction={{ base: 'row', sm: 'column' }}>
                     <Stack>
                         <Card
                             overflow='hidden'
                             variant='outline'
                             textAlign='center'
+                            height="60rem"
                         >
-                            <Stack>
+                            <Stack  height="100%" justifyItems="end">
                                 <CardBody>
                                     <Heading size='md' mb={5}>Multi Games</Heading>
                                     <Image
@@ -129,22 +150,27 @@ function Portfolio() {
                                     </Text>
                                 </CardBody>
                                 <CardFooter justifyContent='center' gap={10}>
-                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://multi-games.vercel.app/">ir al Demo</Link></Button>
-                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/multi-games">Repo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://multi-games.vercel.app/">ir al Demo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/multi-games">Repo</Link></Button>
                                 </CardFooter>
                             </Stack>
                         </Card>
                     </Stack>
                 </Stack>
 
-                <Stack marginBottom='80px' w='400px' direction={{ base: 'row', sm: 'column' }}>
+                <Stack
+                 marginBottom='80px'
+                //   w='400px'
+                w="100%"
+                   direction={{ base: 'row', sm: 'column' }}>
                     <Stack>
                         <Card
                             overflow='hidden'
                             variant='outline'
-                            textAlign='center'>
-                            <Stack>
-                                <CardBody>
+                            textAlign='center'
+                            height="60rem">
+                            <Stack  height="100%" justifyItems="end" >
+                                <CardBody >
                                     <Heading size='md' mb={5}>PsicoEspacio en Linea</Heading>
                                     <Image
                                         mb={5}
@@ -152,21 +178,21 @@ function Portfolio() {
                                         alt='psicoEspacio'
                                     />
                                     <Text py='2'>
-                                        En este caso se trata de un Land Page de un grupo de psicólogas que brindan su servicio en línea, este pryecto es interesante porque se trabajó con una diseñadora UI, es notable su trabajo y una gran experiencia del trabajo en equipo.-
+                                        En este caso se trata de un Land Page de un grupo de psicólogas que brindan su servicio en línea, este pryecto es interesante porque se trabajó con una diseñadora UI, es notable su trabajo, se tuvo que respetar las maquetas de figma con sus propiedades para llegar al diseño realizado, una gran experiencia del trabajo en equipo.-
                                     </Text>
                                 </CardBody>
-                                <CardFooter justifyContent='center' gap={10}>
-                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://psicoespacio-web.vercel.app/">ir al Demo</Link></Button>
-                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='30%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/land_page_psicoEspacio">Repo</Link></Button>
+                                <CardFooter justifyContent='center' alignContent="flex-end" gap={10}>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://psicoespacio-web.vercel.app/">ir al Demo</Link></Button>
+                                    <Button variant='solid' cursor='pointer' colorScheme="blue" width='50%' py={5} size='lg'><Link _hover={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://github.com/gabriel073/land_page_psicoEspacio">Repo</Link></Button>
                                 </CardFooter>
                             </Stack>
                         </Card>
                     </Stack>
                 </Stack>
+            </Grid>
 
-            </Stack>
         </>
     )
 }
 
-export default Portfolio
+export default Projects;

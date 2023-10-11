@@ -1,30 +1,21 @@
-import { Box, Button, Circle, Flex, Image, Stack, Text, useColorMode, useColorModeValue, useMediaQuery } from '@chakra-ui/react';
+import { Box, Flex, Image, Stack, Text, useColorMode, useMediaQuery } from '@chakra-ui/react';
 import React from 'react'
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 
 function Header() {
     const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
-    const circleColor = useColorModeValue("#1B2230", "#2A3460")
-
+ 
     return (
-        <Stack marginTop='100px' >
-            <Circle
-                position="absolute"
-                // bg="blue.100"
-                bg={circleColor}
-                opacity="0.1"
-                w="300px"
-                h="300px"
-                alignSelf="flex-end" />
+        <Stack marginTop='100px' >     
             <Flex direction={isNotSmallerScreen ? "row" : "column"}
                 spacing="200px" p={isNotSmallerScreen ? "32" : "0"}
                 alignSelf="flex-start">
-                <Box mt={isNotSmallerScreen ? "0" : 16} align='flex-start'>
-                    {/* fontSize={{ base: "5xl", sm: "2xl" }} */}
-                    <Text fontSize="5xl" fontWeight="semibold" fontFamily={'VT323, sans-serif'}>
+                <Box mt={isNotSmallerScreen ? "0" : 16} textAlign="center" align='flex-start' display={isNotSmallerScreen ? "" : "none"}>
+                    <Text fontSize="5xl" fontWeight="medium" fontFamily={'VT323, sans-serif'}>
                         <motion.div
                             initial={{ opacity: 0, scale: 0, x: -500 }}
                             whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -36,8 +27,7 @@ function Header() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0, x: 500 }}
                         whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                        transition={{ duration: 0.7 }}
-                    >
+                        transition={{ duration: 0.7 }}>
                         <Text
                             fontSize="7xl"
                             fontWeight="bold"
@@ -47,19 +37,20 @@ function Header() {
                         >Gabriel Marzioli </Text>
                     </motion.div>
                     <Text color={isDark ? "gray.200" : "gray.500"} fontFamily={'VT323, sans-serif'} fontSize={30}>Desarrollador Fullstack 🗣</Text>
-                    <Button mt={8} colorScheme="blue" onClick={() =>
-                        window.open("https://drive.google.com/file/d/1KkCSQPqjDC16F-HkD0GZOGggEy2s_z4f/view?usp=drive_link")
-                    } fontFamily={'VT323, sans-serif'}>descargar CV</Button>
+                    <Link  href="https://drive.google.com/file/d/13t_UgMA9NMsptBA8QNsPBO7rZesiHu1m/view?usp=drive_link"
+                     fontFamily={'VT323, sans-serif'} isExternal>descargar CV</Link>
+
                 </Box>
+
                 <Image alignSelf="center"
                     mt={isNotSmallerScreen ? "0" : "-400"}
                     mr={isNotSmallerScreen ? "5" : "-80"}
                     mb={isNotSmallerScreen ? "0" : "30"}
-                    borderRadius='full'
-                    backgroundColor="transparent"
-                    filter='sepia(80%)'
-                    boxShadow="lg"
+                    borderRadius='2xl'
                     boxSize="300px"
+                    objectFit="cover"
+                    objectPosition="left"
+                    boxShadow= "10px 10px 36px 7px rgba(0,0,0,0.75)"
                     src='../../assets/foto_perfil.jpg' alt='photoPerfil'
                 />
             </Flex>

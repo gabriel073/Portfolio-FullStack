@@ -327,10 +327,7 @@ function Contacto() {
                             h='40px'
                         />
                     </Stack>
-                </form>
-                <Stack mt='2%'>
-                    <Text >By Gabriel 🤓</Text>
-                </Stack>
+                </form>               
             </Stack >
 
         </Stack >

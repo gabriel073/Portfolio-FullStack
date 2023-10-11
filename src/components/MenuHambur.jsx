@@ -13,7 +13,7 @@ function MenuHambur() {
             />
             <MenuList>
                 <Link p={6} _hover={{ textDecoration: 'none', color: 'blue' }} href='#skills'  >Skills</Link>
-                <Link p={6} _hover={{ textDecoration: 'none', color: 'blue' }} href='#proyectos'>Portafolio</Link>
+                <Link p={6} _hover={{ textDecoration: 'none', color: 'blue' }} href='#proyectos'>Proyectos</Link>
                 <Link p={6} _hover={{ textDecoration: 'none', color: 'blue' }} href='#contacto'>Contacto</Link>
             </MenuList>
         </Menu>
