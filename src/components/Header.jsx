@@ -8,9 +8,9 @@ function Header() {
     const { colorMode } = useColorMode();
     const isDark = colorMode === "dark";
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
- 
+
     return (
-        <Stack marginTop='100px' >     
+        <Stack marginTop='100px' >
             <Flex direction={isNotSmallerScreen ? "row" : "column"}
                 spacing="200px" p={isNotSmallerScreen ? "32" : "0"}
                 alignSelf="flex-start">
@@ -37,8 +37,9 @@ function Header() {
                         >Gabriel Marzioli </Text>
                     </motion.div>
                     <Text color={isDark ? "gray.200" : "gray.500"} fontFamily={'VT323, sans-serif'} fontSize={30}>Desarrollador Fullstack 🗣</Text>
-                    <Link  href="https://drive.google.com/file/d/13t_UgMA9NMsptBA8QNsPBO7rZesiHu1m/view?usp=drive_link"
-                     fontFamily={'VT323, sans-serif'} isExternal>descargar CV</Link>
+                    <Link href="https://drive.google.com/file/d/1basw6o9-J_Bc49GyqVZ8MVoyTlm1cXBS/view?usp=drive_link"
+
+                        fontFamily={'VT323, sans-serif'} isExternal>descargar CV</Link>
 
                 </Box>
 
@@ -50,7 +51,7 @@ function Header() {
                     boxSize="300px"
                     objectFit="cover"
                     objectPosition="left"
-                    boxShadow= "10px 10px 36px 7px rgba(0,0,0,0.75)"
+                    boxShadow="10px 10px 36px 7px rgba(0,0,0,0.75)"
                     src='../../assets/foto_perfil.jpg' alt='photoPerfil'
                 />
             </Flex>
