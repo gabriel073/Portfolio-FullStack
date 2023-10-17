@@ -2,13 +2,8 @@ import { IconButton, Stack, VStack } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
-
-
-
 function Footer() {
-
     return (
-
         <VStack
             p={5}
             maxWidth="1200px"
@@ -21,8 +16,6 @@ function Footer() {
             </Stack>
         </VStack>
     )
-
-
 }
 
 export default Footer;     
