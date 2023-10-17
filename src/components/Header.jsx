@@ -37,9 +37,7 @@ function Header() {
                         >Gabriel Marzioli </Text>
                     </motion.div>
                     <Text color={isDark ? "gray.200" : "gray.500"} fontFamily={'VT323, sans-serif'} fontSize={30}>Desarrollador Fullstack 🗣</Text>
-                    <Link href="https://drive.google.com/file/d/1basw6o9-J_Bc49GyqVZ8MVoyTlm1cXBS/view?usp=drive_link"
-
-                        fontFamily={'VT323, sans-serif'} isExternal>descargar CV</Link>
+                    <Link href="https://drive.google.com/file/d/1basw6o9-J_Bc49GyqVZ8MVoyTlm1cXBS/view?usp=drive_link" fontFamily={'VT323, sans-serif'} isExternal>descargar CV</Link>
 
                 </Box>
 
