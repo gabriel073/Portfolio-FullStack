@@ -1,7 +1,6 @@
-import { Box, Flex, Image, Stack, Text, useColorMode, useMediaQuery } from '@chakra-ui/react';
+import { Box, Flex, Image, Stack, Text, useColorMode, useMediaQuery, Link } from '@chakra-ui/react';
 import React from 'react'
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
 
 
 function Header() {
@@ -37,7 +36,9 @@ function Header() {
                         >Gabriel Marzioli </Text>
                     </motion.div>
                     <Text color={isDark ? "gray.200" : "gray.500"} fontFamily={'VT323, sans-serif'} fontSize={30}>Desarrollador Fullstack 🗣</Text>
-                    <Link href="https://drive.google.com/file/d/1basw6o9-J_Bc49GyqVZ8MVoyTlm1cXBS/view?usp=drive_link" fontFamily={'VT323, sans-serif'} isExternal>descargar CV</Link>
+
+                    <Link href="https://drive.google.com/file/d/1basw6o9-J_Bc49GyqVZ8MVoyTlm1cXBS/view?usp=drive_link" isExternal fontFamily={'VT323, sans-serif'} fontSize={22} >descargar CV</Link>
+
 
                 </Box>
 
